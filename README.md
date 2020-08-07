@@ -1,5 +1,8 @@
 # lm-training-research-project
 
+- blog post part 1: https://bilal.software/2020/6/22/nlp-series-1/
+- blog post part 2: https://bilal.software/2020/7/17/nlp-series-2/
+
 This is my code for my lm pretraining research project that i worked on during quarantine. The idea was to apply ALBERT-style parameter-sharing and factorized embedding to GPT-2. I was able to (almost, 21 vs 17ppl) replicate OpenAI's ppl values for gpt2-124m when i pretrained it on openwebtext for 100k training iterations on a TPU v3-128, but my ALBERT-style gpt2 model didn't train too well (the best ppl values I got were around 30) and couldn't generate coherent-sounding text.
 
 The code for my ALBERT-style gpt2 model can be found in my fork of huggingface/transformers: https://github.com/bkkaggle/transformers/tree/albert-style. The main files for the pytorch and tf versions of the models are [1](https://github.com/bkkaggle/transformers/blob/albert-style/src/transformers/configuration_algpt2.py), [2](https://github.com/bkkaggle/transformers/blob/albert-style/src/transformers/modeling_algpt2.py), [3](https://github.com/bkkaggle/transformers/blob/albert-style/src/transformers/modeling_tf_algpt2.py), [4](https://github.com/bkkaggle/transformers/blob/albert-style/src/transformers/tokenization_algpt2.py).
